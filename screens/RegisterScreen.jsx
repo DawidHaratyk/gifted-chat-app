@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import firebase from "firebase";
+import { app } from "../firebase";
 
 export const RegisterScreen = () => {
   const [email, setEmail] = useState("");
@@ -14,12 +15,14 @@ export const RegisterScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const register = () => {
-    firebase
+    app
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
+        user.updateEmail(user.email);
+        console.log(user);
         // ...
       })
       .catch((error) => {

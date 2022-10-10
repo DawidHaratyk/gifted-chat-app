@@ -1,9 +1,5 @@
-// Import the functions you need from the SDKs you need
-import * as firebase from "firebase";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import firebase from "firebase";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCLzct2susafx2tehN8lNdCZdgdzqotfMs",
   authDomain: "socializing-app-ac20d.firebaseapp.com",
@@ -11,21 +7,16 @@ const firebaseConfig = {
   projectId: "socializing-app-ac20d",
   storageBucket: "socializing-app-ac20d.appspot.com",
   messagingSenderId: "41571108076",
-  appId: "1:41571108076:web:66a212748b91ad43da11c9",
-  measurementId: "G-PFN7VXH62N",
+  appId: "1:41571108076:web:dc06a576e84c17ceda11c9",
+  measurementId: "G-71VX6084PE",
 };
-
-// Initialize Firebase
-// if (firebase.apps.length === 0) {
-//   app = firebase.initializeApp(firebaseConfig);
-// } else {
-//   app = firebase.app();
-// }
 
 // !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
+
+const app = firebase.initializeApp(firebaseConfig);
 
 // const db = firebase.firestore();
 
-export { firebase };
+export { firebase, app };
